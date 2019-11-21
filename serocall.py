@@ -3,6 +3,8 @@ import sys
 import argparse
 from itertools import groupby
 from math import log
+from __future__ import (absolute_import, division,
+                        print_function, unicode_literals)
 
 # Process the command-line arguments
 
@@ -308,7 +310,7 @@ for round in range(1, 101):
             print(tu)
             cnt = 0.0
             for (i, t) in enumerate(tr):
-                print( i, t, cnt)
+                print(i, t, cnt)
                 cnt += t[1]
             print("Round %d, %s - ratioR=%.5f  ratioU=%.5f   UvsR=%.4f  finalRatio=%.5f  %.5f -> %.5f (%.5f)" % (round, serotypes[sidx], ratioR, ratioU, UvsRratio, finalRatio, origF, F[sidx], newF))
             print("--------------------------------------------------")
