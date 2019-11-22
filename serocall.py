@@ -118,6 +118,9 @@ for line in fp:
 
     key = ":::".join(f[1:4])
     if key not in binmap or binmap[key] != bidx:
+        print(key)
+        print(bidx)
+        print(binmap)
         sys.stderr.write("Error:  Baseline and sample bin counts differ.\n")
         sys.exit(-1)
 
